@@ -1,0 +1,229 @@
+/* Paleta de colores*/
+.color1 {color: #123453;}
+.color2 {color: #2e4979;}
+.color3 {color: #7e6cac;}
+.color4 {color: #dd89dc;}
+.color5 {color: #f6a4eb;}
+
+/* fuentes de letra*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titan+One&display=swap');
+
+
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    font-family: 'Titan One', cursive;
+    /*background-color: #2e4979;*/
+    background: linear-gradient(to left,#123453,#7e6cac,#dd89dc);
+}
+.titulo {
+color: white;
+font-size: 68px;
+margin-bottom: 0px;
+    
+}
+
+.subtitulo {
+    color: aliceblue;
+    font-size: 32px;
+
+}
+.tarjetas {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#seleccionar_mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon {
+    width: 124px;
+    height: 172px;
+    background:  #7e6cac;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 20px;
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tarjeta-de-mokepon img{
+    width: 100px;
+}
+
+input {
+    display: none;
+}
+
+input:checked +label {
+    background-color: #f6a4eb;
+}
+
+#boton-mascota {
+    color: #2e4979;
+    background-color:#f6a4eb;
+    border-bottom:#7e6cac;
+    width: 250px;
+    height: 36px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 4px;
+    border: 5px;
+    cursor: pointer;
+    box-shadow: 0px 8px #72619d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+#boton-mascota:hover{
+    background-color: #dd89dc;
+}
+#boton-mascota:active {
+    background-color: #dd89dc;
+    box-shadow: opx 2px #453b5e;
+    transform: translateY(4px);
+}
+
+#seleccionar_ataque {
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetas-ataque {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-de-ataque {
+    color: #2e4979;
+    background-color:#f6a4eb;
+    border-bottom:#7e6cac;
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 4px;
+    border: 5px;
+    cursor: pointer;
+    box-shadow: 0px 8px #72619d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+
+.boton-de-ataque:hover{
+    background-color: #dd89dc;
+}
+
+.boton-de-ataque:active {
+    background-color: #dd89dc;
+    box-shadow: opx 2px #453b5e;
+    transform: translateY(4px);
+}
+
+#mensajes   {
+    height: 156px;
+    margin-top: 20px;
+    background:#123453;
+    width: 380px;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 32px;
+    color: #f6a4eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#boton-reiniciar {
+    border: none;
+    color: #2e4979;
+    font-family: 'Press Start 2P', cursive;
+    background: #f6a4eb;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 8px #72619d;
+}
+#boton-reiniciar:hover{
+    background-color: #dd89dc;
+}
+
+#boton-reiniciar:active {
+    background-color: #dd89dc;
+    box-shadow: opx 2px #453b5e;
+    transform: translateY(4px);
+}
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+.columna-ataque {
+    display: grid;
+    justify-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#ver-mapa button {
+    color: #2e4979;
+    background-color:#f6a4eb;
+    border-bottom:#7e6cac;
+    width: 84px;
+    height: 36px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 4px;
+    border: 5px;
+    cursor: pointer;
+    box-shadow: 0px 8px #72619d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}
+#ver-mapa .abajo {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 760px){
+    #seleccionar_mascota {
+        height: 900px;
+        justify-content: flex-start;
+    }
+    .titulo{
+        font-size: 54px;
+    }
+    .subtitulo{
+        font-size: 20px;
+    }
+    .tarjetas{
+        height: 600px;
+    }
+    .tarjetas, .tarjetas-ataque {
+        flex-direction: column;
+        align-items: center;
+    }
+    #mensajes{
+        width: 240px;
+        font-size: 20px;
+        height: 100px;
+    }
+    .boton-de-ataque {
+        width: 120px;
+    }
+
+}
